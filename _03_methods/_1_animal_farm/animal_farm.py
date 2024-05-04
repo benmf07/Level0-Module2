@@ -10,13 +10,24 @@ def animals():
     global window
     window = Tk()
     window.withdraw()
-
+    while True:
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
-
+        animal=simpledialog.askstring("animal","what animal do you want?")
     # TODO 2. Make it so that the user can keep entering new animals.
-
-    # TODO 3. If the user enters 'exit', stop the program
+        if animal == "cat":
+            meow()
+        if animal == "cow":
+            moo()
+        if animal == "llama":
+            llama_scream()
+        if animal == "duck":
+            quack()
+        if animal == "dog":
+            woof()
+        if animal== "exit":
+            break
+# TODO 3. If the user enters 'exit', stop the program
 
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
@@ -47,27 +58,27 @@ def show_image(filename=None):
 
 def moo():
     show_image('cow.jpg')
-    playsound('moo.wav')
+    #playsound('moo.wav')
 
 
 def quack():
     show_image('duck.jpg')
-    playsound('quack.wav')
+    #playsound('quack.wav')
 
 
 def woof():
     show_image('dog.jpg')
-    playsound('woof.wav')
+    #playsound('woof.wav')
 
 
 def meow():
     show_image('cat.jpg')
-    playsound('meow.wav')
+    #playsound('meow.wav')
 
 
 def llama_scream():
     show_image('llama.jpg')
-    playsound('llama.wav')
+    #playsound('llama.wav')
 
 
 if __name__ == '__main__':
